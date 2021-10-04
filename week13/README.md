@@ -124,7 +124,7 @@ These Beats allow us to collect the following information from each machine:
 *In example: If an attacker were to log into the system to change a password, that information will log into Logstash*
 <br>
 
-      ![metricbeat](images\filebeatdataExample.PNG)
+![metricbeat](images\filebeatdataExample.PNG)
 
 <br><br><br>
 
@@ -169,6 +169,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 ### Kibana
 
-      ![dockerpsoutput](images\kibanaFinal.png)
+![dockerpsoutput](images\kibanaFinal.png)
 
 
