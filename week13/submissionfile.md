@@ -35,10 +35,11 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
       Filebeat is installed to collect data from file system (web servers).
 
      
-      Metricbeat collects machine metrics such as cpu and ram, etc
+      Metricbeat collects machine metrics such as cpu and ram, etc.
 
+<br>
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address    | Operating System  |
 |----------|----------|---------------|------------------ |
@@ -47,18 +48,19 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web-1    |  DVWA    | 10.0.0.2      | Linux Ubuntu 18.4 |
 | Web-2    |  DVWA    | 10.0.0.3      | Linux Ubuntu 18.4 |
 |Elk-Server|Monitoring| 10.1.0.6      | Linux Ubuntu 18.4 |
+
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the **Jumpbox provisioner** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_  
+
 
     
       Local personal IP address: Temp 74.56.15.2
 
 
 Machines within the network can only be accessed by **Jumpbox Provisioner**.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+
 
 
       Jumpbox private IP 10.0.0.4 via port 22 SSH
@@ -83,10 +85,14 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
       The main advantage of automating configurations with Ansible is to prevent human errors and help install and updated web servers.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- Install Docker.io, python, Docker module.
-- Configure Elk server's memory and increased it. 
-- After DL docker elk container and configured it
+
+- Install Docker.io
+- Install python (pip3)
+- Install Docker module
+- Increase memory  
+- Download and launch docker elk container
+- Enable service docker on boot
+<br><br>
 - ![picture](images/elkinstall.PNG)
 
 The following screenshot displays the result of running **docker ps** after successfully configuring the ELK instance.
@@ -100,22 +106,37 @@ This ELK server is configured to monitor the following machines:
             Web-2 10.0.0.3 
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+
 
             Filebeat
             Metricbeat
 
-![docker ps output](images\kibana-check-data.PNG)
+![kibana](images\kibana-check-data.PNG)
 
 
-![docker ps output](images\metricbeat-checkdata.PNG)
+![metric beat](images\metricbeat-checkdata.PNG)
 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
-**Filebeat is a light-weight shipper that centralizes and forwards data logs.**
-**Metricbeat is also a light-weight shipper that collects metric from your system and services. From CPU to Memory, Load to Network and Redis to NGINX and much more it is a light-weight way to send system and service statistics. Metricbeat collects data from your filebeat and sends it to your monitoring cluster.**
+**Filebeat is a tool used to collect data, log events, and sends it to Elastic search, Logstash, and Kibana.**
+
+*In example: If an attacker were to log into the system to change a password, that information will log into Logstash*
+<br>
+
+![metric beat](images\filebeatdataExample.PNG)
+
+<br><br><br>
+
+
+**Metricbeat is also a tool used to collect metric datas like CPU, memory, or ram from machines and sent to Elasticsearch, Logstash, and Kibana.**
+
+
+*In example:*
+![metric beat](images\metricbeatData.PNG)
+
+
+
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -127,61 +148,27 @@ In order to use the playbook, you will need to have an Ansible control node alre
         http://20.94.250.42:5601/app/kibana
 
 
-###Configure ELK VM with Docker  
+### Configure ELK VM with Docker  
 
 <br>
-```bash
-ansible-config      ansible-console     ansible-galaxy      ansible-playbook    ansible-vault
-ansible-connection  ansible-doc         ansible-inventory   ansible-pull
-root@171c1213c55f:/etc/ansible# ansible-playbook install-elk.yml
-[WARNING]: ansible.utils.display.initialize_locale has not been called, this may result in incorrectly calculated text widths that can cause
-Display to print incorrect line lengths
 
-PLAY [Configure Elk VM with Docker] *************************************************************************************************************
+![docker ps output](images\install_elkpb.PNG)
 
-TASK [Gathering Facts] **************************************************************************************************************************
-ok: [10.1.0.6]
+<br>
 
-TASK [Install docker.io] ************************************************************************************************************************
-ok: [10.1.0.6]
+### Install and launch filebeat
 
-TASK [Install pip3] *****************************************************************************************************************************
-ok: [10.1.0.6]
-
-TASK [Install Docker python module] *************************************************************************************************************
-ok: [10.1.0.6]
-
-TASK [Use more memory] **************************************************************************************************************************
-ok: [10.1.0.6]
-
-TASK [download and launch a docker elk container] ***********************************************************************************************
-[DEPRECATION WARNING]: The container_default_behavior option will change its default value from "compatibility" to "no_defaults" in
-community.docker 2.0.0. To remove this warning, please specify an explicit value for it now. This feature will be removed from community.docker
-in version 2.0.0. Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
-ok: [10.1.0.6]
-
-TASK [Enable service docker on boot] ************************************************************************************************************
-ok: [10.1.0.6]
-
-PLAY RECAP **************************************************************************************************************************************
-10.1.0.6                   : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-```
+![docker ps output](images\install_filebeatpb.PNG)
 
 
+### Install and launch metricbeat
+
+![docker ps output](images\installmetricPB.PNG)
+
+<br>
+
+### Kibana
+
+![docker ps output](images\kibanaFinal.PNG)
 
 
-
-
-
-
-SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
