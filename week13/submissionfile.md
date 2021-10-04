@@ -169,6 +169,6 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 ### Kibana
 
-![docker ps output](images\kibanaFinal.PNG)
+![docker ps output](images\kibanaFinal.png)
 
 
