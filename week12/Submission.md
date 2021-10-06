@@ -2,7 +2,7 @@
 
 <br><br>
 
-![picture](images/week12.PNG)
+![picture](images/week12.png)
 <br><br>
 
 
