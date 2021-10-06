@@ -97,7 +97,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running **docker ps** after successfully configuring the ELK instance.
 
-![docker ps output](images\dockerps.PNG)
+![docker ps output](images/dockerps.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -111,10 +111,10 @@ We have installed the following Beats on these machines:
             Filebeat
             Metricbeat
 
-![kibana](images\kibana-check-data.PNG)
+![kibana](images/kibana-check-data.PNG)
 
 
-![metric beat](images\metricbeat-checkdata.PNG)
+![metric beat](images/metricbeat-checkdata.PNG)
 
 
 These Beats allow us to collect the following information from each machine:
@@ -124,7 +124,7 @@ These Beats allow us to collect the following information from each machine:
 *In example: If an attacker were to log into the system to change a password, that information will log into Logstash*
 <br>
 
-![metricbeat](images\filebeatdataExample.PNG)
+![metricbeat](images/filebeatdataExample.PNG)
 
 <br><br><br>
 
@@ -133,7 +133,7 @@ These Beats allow us to collect the following information from each machine:
 
 
 *In example:*
-![metric beat](images\metricbeatData.PNG)
+![metric beat](images/metricbeatData.PNG)
 
 
 
@@ -152,18 +152,18 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 <br>
 
-![docker ps output](images\install_elkpb.PNG)
+![docker ps output](images/install_elkpb.PNG)
 
 <br>
 
 ### Install and launch filebeat
 
-![docker ps output](images\install_filebeatpb.PNG)
+![docker ps output](images/install_filebeatpb.PNG)
 
 
 ### Install and launch metricbeat
 
-![docker ps output](images\installmetricPB.PNG)
+![docker ps output](images/installmetricPB.PNG)
 
 <br>
 
