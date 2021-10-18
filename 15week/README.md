@@ -62,7 +62,7 @@
      
      - This process is no different than if we went to the command line and typed that same command: `ping 8.8.8.8`
 
-       ![picture](pictures\03.PNG)
+       ![picture](./pictures/03.PNG)
 
 
 
