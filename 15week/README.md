@@ -56,7 +56,7 @@
 
    - Test the webpage by entering the IP address `8.8.8.8`. Press Submit to see the results display on the web application.
 
-     ![picture](/pictures/01.PNG)
+     ![picture](15week/pictures/01.PNG)
 
      - Behind the scenes, when you select Submit, the IP you type in the field is *injected* into a command that is run against the Replicants webserver. The specific command that ran on the webserver is `ping <IP>` and `8.8.8.8` is the field value that is injected into that command.
      
