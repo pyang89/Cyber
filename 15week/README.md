@@ -13,7 +13,7 @@
       
       - The web page should look like the following:
 
-        ![picture](pictures\02.PNG)
+        ![picture](./pictures/02.PNG)
 
    **Note:** If you have any issues accessing this webpage,  refer to the Activity Setup steps we completed in the activity `06_SQL_Injection` on Day 1 of this unit. 
 
