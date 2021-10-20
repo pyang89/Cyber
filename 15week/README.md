@@ -56,7 +56,7 @@
 
    - Test the webpage by entering the IP address `8.8.8.8`. Press Submit to see the results display on the web application.
 
-     ![picture](15week/pictures/01.PNG)
+     ![picture](./pictures/01.PNG)
 
      - Behind the scenes, when you select Submit, the IP you type in the field is *injected* into a command that is run against the Replicants webserver. The specific command that ran on the webserver is `ping <IP>` and `8.8.8.8` is the field value that is injected into that command.
      
@@ -79,7 +79,7 @@
   
    - Press Enter. Note the ping results are the results of the second `pwd` command:
 
-     ![picture](pictures\04.PNG)
+     ![picture](./pictures/04.PNG)
 <br><br> 
 
 
@@ -91,12 +91,12 @@
 4. Now that you have determined that Replicants new application is vulnerable to command injection, you are tasked with using the dot-dot-slash method to design two payloads that will display the contents of the following files:
    
    - `/etc/passwd` <br>
-   ![picture](pictures\05.PNG)
+   ![picture](./pictures/05.PNG)
 <br><br>
    
    - `/etc/hosts`<br><br>
 
-    ![picture](pictures\06.PNG)
+    ![picture](./pictures/06.PNG)
   
   <br><br>
   
@@ -120,7 +120,7 @@
   
     -  The page should look like the following:
 
-      ![picture](pictures\07.PNG)
+      ![picture](./pictures/07.PNG)
 
     - Click "here" to install bWapp. (See the arrow in the previous screenshot.) 
     
@@ -130,18 +130,18 @@
 
       - Password: `bug`
 
-       ![picture](pictures\08.PNG)
+       ![picture](./pictures/08.PNG)
 
  
     - This will take you to the following page:
 
-     ![picture](pictures\09.PNG)
+     ![picture](./pictures/09.PNG)
 
     - To access the application where we will perform our activity, enter in the following URL: <http://192.168.13.35/ba_insecure_login_1.php>
 
       - This will take you to the following page:
 
-        ![picture](pictures\10.PNG)
+        ![picture](./pictures/10.PNG)
 
 2. This page is an administrative web application that serves as a simple login page. An administrator enters their username and password and selects Login.
      
@@ -153,19 +153,19 @@
 
 <br> 
 
-![picture](pictures\11.PNG)
+![picture](./pictures/11.PNG)
 
   <br><br>
 
- ![picture](pictures\12.PNG)
+ ![picture](./pictures/12.PNG)
 
  <br><br>
 
- ![picture](pictures\13.PNG)
+ ![picture](./pictures/13.PNG)
 
  <br>
 
- ![picture](pictures\14.PNG)
+ ![picture](./pictures/14.PNG)
 
 3. Years ago, Replicants had a systems breach and several administrators passwords were stolen by a malicious hacker. The malicious hacker was only able to capture a list of passwords, not the associated accounts' usernames. Your manager is concerned that one of the administrators that accesses this new web application is using one of these compromised passwords. Therefore, there is a risk that the malicious hacker can use these passwords to access an administrator's account and view confidential data.
 
@@ -175,9 +175,9 @@
 
      - [List of Administrators](listofadmins.txt) <br>
 
-     ![picture](pictures\15.PNG)<br>
+     ![picture](./pictures/15.PNG)<br>
 
-     ![picture](pictures\16.PNG) <br>
+     ![picture](./pictures/16.PNG) <br>
 
 
      -[Breached list of Passwords](breached_passwords.txt)
@@ -185,14 +185,14 @@
 
      <br>
 
-     ![picture](pictures\17.PNG)
+     ![picture](./pictures/17.PNG)
      <br>
 
-     ![picture](pictures\18.PNG)
+     ![picture](./pictures/18.PNG)
      
      <br>
 
-     ![picture](pictures\19.PNG)
+     ![picture](./pictures/19.PNG)
 
 
   
@@ -212,7 +212,7 @@
 
    <br>
 
-   ![picture](pictures\20.PNG)
+   ![picture](./pictures/20.PNG)
    <br>
 
   
@@ -226,18 +226,18 @@
    
    - To access the BeEF GUI, right-click the first URL and select Open Link.
 
-     ![picture](pictures\21.PNG)
+     ![picture](./pictures/21.PNG)
 
    - When the BeEF webpage opens, login with the following credentials:
      - Username: `beef`
      
      - Password: `feeb`
 
-     ![picture](pictures\22.PNG)
+     ![picture](./pictures/22.PNG)
 
    - You have successfully completed the setup when you have reached the `BeEF Control Panel` shown in the image below:
 
-     ![picture](pictures\23.PNG)
+     ![picture](./pictures/23.PNG)
 
 2. The Browser Exploitation Framework (BeEF) is a practical client-side attack tool that exploits vulnerabilities of web browsers to assess the security posture of a target.      
 
@@ -272,7 +272,7 @@
 
       - Click on the browser `127.0.0.1` as indicated in the screenshot below.
 
-        ![picture](pictures\25.PNG)
+        ![picture](./pictures/25.PNG)
 
       - Under the Details tab, we can see information about the infected browser. 
 
@@ -280,7 +280,7 @@
 
     - Select the Commands tabs. 
     <br>
-    ![picture](pictures\26.PNG)
+    ![picture](./pictures/26.PNG)
     
       - This will list folders of hundreds of exploits that can be ran against the hooked browser. Note that many may not work, as they are dependent on the browser and security settings enabled.
   
@@ -299,7 +299,7 @@
 
    <br><br>
 
-   ![picture](pictures\27.PNG)
+   ![picture](./pictures/27.PNG)
 
      - After selecting Execute, return back to your browser that was displaying the Butcher Shop website. Note that it has been changed to a Google login page.
 
@@ -310,7 +310,7 @@
 
    <br>
 
-   ![picture](pictures\28.PNG)
+   ![picture](./pictures/28.PNG)
 
      - Username: `hackeruser`
      - Password: `hackerpass`
@@ -326,11 +326,11 @@
 <br>
 <br>
 
-![picture](pictures\29.PNG)
+![picture](./pictures/29.PNG)
 
 <br>
 
-![picture](pictures\30.PNG)
+![picture](./pictures/30.PNG)
 
 
 5. Now that you know how to use the BeEF tool, you'll use it to test the Replicants web application. You are tasked with using a stored XSS attack to inject a BeEF hook into Replicants' main website.
@@ -356,7 +356,7 @@
 
 <br> <br>
 
-![picture](pictures\31.PNG)
+![picture](./pictures/31.PNG)
 
 
 <br> <br>
