@@ -19,23 +19,23 @@
 
 Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the following questions based on the results: <br>
 
-![picture](.\images\02.PNG)
+![picture](images/02.PNG)
 
-![picture](.\images\03.PNG)
+![picture](images/03.PNG)
 
   1. Where is the company located: 
   
          Sunnyvale, CA 
   
 
-  ![picture](.\images\04.PNG) <br>
+  ![picture](images/04.PNG) <br>
 
 
   2. What is the NetRange IP address: 
    
           65.61.137.64 - 65.61.137.127 
 
-![picture](.\images\05.PNG) 
+![picture](images/05.PNG) 
 
 
 
@@ -50,7 +50,7 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
         	65.61.137.117
 
-![picture](.\images\06.PNG) 
+![picture](images/06.PNG) 
 
 #### Step 3: Shodan
 
@@ -58,7 +58,7 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
       port 80, 443, 8080 
 
-![picture](.\images\07.PNG) 
+![picture](images/07.PNG) 
 
 
 
@@ -66,21 +66,21 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
 - Install the Recon module `xssed`. 
 
-![picture](.\images\08.PNG) 
+![picture](images/08.PNG) 
 
 
 - Set the source to `demo.testfire.net`. 
 
-![picture](.\images\09.PNG) 
+![picture](images/09.PNG) 
 
 
 - Run the module. 
 
-![picture](.\images\10.PNG) 
+![picture](images/10.PNG) 
 
 Is Altoro Mutual vulnerable to XSS: Yes
 
-![picture](.\images\11.PNG) 
+![picture](images/11.PNG) 
 
 ### Step 5: Zenmap
 
@@ -104,7 +104,7 @@ Your client has asked that you help identify any vulnerabilities with their file
 
 - Zenmap vulnerability script command: 
 
-![picture](.\images\13.PNG) 
+![picture](images/13.PNG) 
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability:
@@ -127,7 +127,7 @@ Your client has asked that you help identify any vulnerabilities with their file
       -secure network
       -have 2 step authentication 
 
-![picture](.\images\12.PNG) 
+![picture](images/12.PNG) 
 
 
 ---
