@@ -12,7 +12,7 @@
 
 `This information is helpful to the attacker because they can use a whaling attack to get access to the CEO's information.`
 
-![picture](\images\01.PNG)
+![picture](images\01.PNG)
 
 
 #### Step 2: DNS and Domain Discovery
