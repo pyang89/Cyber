@@ -66,7 +66,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
   
    Hint: Use the following format when for the `table` command: `| table fieldA  fieldB fieldC`
 
- ![picture](pictures\01.PNG) 
+ ![picture](pictures/01.PNG) 
 
 4. Answer the following questions:
 
