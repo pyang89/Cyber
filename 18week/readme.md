@@ -81,7 +81,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 Submit a screen shot of your report and the answer to the questions above.
 
-![picture](pictures\02.PNG) 
+![picture](pictures/02.PNG) 
  
 ### Step 2: Are We Vulnerable? 
 
@@ -98,13 +98,13 @@ Submit a screen shot of your report and the answer to the questions above.
    - The database server IP is `10.11.36.23`.
    - The field that identifies the level of vulnerabilities is `severity`.
 
-   ![picture](pictures\03.PNG) 
+   ![picture](pictures/03.PNG) 
       
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
 
-![picture](pictures\04.PNG) 
+![picture](pictures/04.PNG) 
 
-![picture](pictures\05.PNG) 
+![picture](pictures/05.PNG) 
 
 
 
@@ -123,7 +123,7 @@ Submit a screen shot of your report and the answer to the questions above.
      - Look for the `name` field to find failed logins.
      - Note the attack lasted several hours.
 
-     ![picture](pictures\06.PNG) 
+     ![picture](pictures/06.PNG) 
 
       
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
@@ -134,8 +134,8 @@ Submit a screen shot of your report and the answer to the questions above.
 
 Submit the answers to the questions about the brute force timing, baseline and threshold. Additionally, provide a screenshot as proof that the alert has been created.
 
-![picture](pictures\07.PNG) 
-  ![picture](pictures\08.PNG) 
+![picture](pictures/07.PNG) 
+  ![picture](pictures/08.PNG) 
  
  
 ### Your Submission
